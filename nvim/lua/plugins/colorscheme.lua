@@ -42,7 +42,7 @@
   },
 } --]]
 
-return {
+--[[ return {
   {
     "oncomouse/lushwal.nvim",
     cmd = { "LushwalCompile" },
@@ -57,4 +57,12 @@ return {
       colorscheme = "lushwal",
     },
   },
+} --]]
+
+return {
+  "RedsXDD/neopywal.nvim",
+  name = "neopywal",
+  lazy = false,
+  priority = 1000,
+  opts = {},
 }

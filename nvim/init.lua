@@ -1,7 +1,11 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-vim.api.nvim_command("autocmd FileType tex syntax clear Conceal")
+local neopywal = require("neopywal")
+neopywal.setup()
+vim.cmd.colorscheme("neopywal")
+
+--[[ vim.api.nvim_command("autocmd FileType tex syntax clear Conceal")
 
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
@@ -19,4 +23,4 @@ function Transparent(color)
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
-Transparent()
+Transparent() --]]
